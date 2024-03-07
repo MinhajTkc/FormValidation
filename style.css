@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.788); 
+    background-color: #f4ebebfe;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #d5dee1fe; */
+    
+}
+
+.container form {
+    width: 80%;
+    margin-top: 70px;
+    max-width: 700px;
+    padding: 50px 30px 20px;
+    border-radius: 4px;
+     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);   */
+    position: relative;
+}
+
+
+H3 {
+    padding-left: 10px;     
+    font-size: 20px;
+    color: rgb(5, 82, 82);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -40%);
+    background: #ffffffd9;
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+   
+}
+
+
+.input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+    /* background-color: #decfcf; */
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.input-group label {
+    flex-basis: 32%;
+}
+
+.input-group input {
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    /* border-bottom: 1px solid #999; */
+    color: #333;
+    font-size: 16px;
+}
+
+
+::placeholder {
+    font-size: 14px;
+}
+
+
+form button {
+    background: #141a3473;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    /* border: 1px solid rgba(255, 255, 255, 0.7); */
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 10px; 
+}
+
+form #btnnew {
+    background: #2499edfc;
+    /* background: #3d64e6; */
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+    
+}
+
+.input-group span{
+    position: absolute;
+    bottom: 12px;
+    right: 30px;
+    font-size: 14px;
+    color: red;
+}
+
+.input-group span i{
+    color: seagreen;  
+}
+
+#show-password1{
+    position: absolute;
+    top: 20%;
+    right: 1%;
+
+}
+
+#show-password2{
+    position: absolute;
+    top: 20%;
+    right: 1%;
+
+}
+
+button:hover{
+    cursor: not-allowed;
+}
+
+/* Default styles for all devices */
+.desktop-form {
+    display: block; 
+  }
+
+ .desktop-form-message {
+    text-align: center; 
+    display: none;
+    padding: 20px;
+}
+  
+  @media (max-width: 768px) {
+    .desktop-form {
+      display: none; /* or you can set visibility:hidden or any other styles to hide the form on smaller screens */
+    }
+    .desktop-form-message {
+        display: block;
+    }
+    body{
+        background-color: #dfb47f34;
+    }
+  }
+  
+
+/* @media(max-width:436px) {
+    .input-group {
+        flex-direction: column; 
+         align-items: normal;  
+        padding-top: 5px;
+    }
+
+    .input-group span{
+        position: relative;
+        bottom: 5px;
+        padding-left: 17px;
+        right: 15px;
+    }
+} */
