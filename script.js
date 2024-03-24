@@ -19,7 +19,11 @@ function validateName(){
    
 
     if(!name.match(/^[A-Z][A-Za-z -]{6,}$/)){
-        nameError.innerHTML = "Write full name";       
+        if (!/^[A-Z]/.test(name)) {
+            nameError.innerHTML = "First letter must be capitalized";
+        } else {
+            nameError.innerHTML = "Write full name";
+        }
         return false;
     }
 
@@ -131,19 +135,24 @@ function validateconfirmpasswordError(){
     
 }
 
-if (validateName()){
-   
-}
     
 
-function validateForm(){
-    if(!validateName() || !validatedateofbirth() || !validatePhone() || !validateEmail() || !validatepasswordError() || !validateconfirmpasswordError()){
+function validateForm() {
+    if (!validateName() || !validatedateofbirth() || !validatePhone() || !validateEmail() || !validatepasswordError() || !validateconfirmpasswordError()) {
         submitError.style.display = 'block';
         submitError.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Please fix error to submit';
-        setTimeout(function(){submitError.style.display = 'none';},3000);
+        setTimeout(function () { submitError.style.display = 'none'; }, 3000);
         return false;
+    } else {
+        // All validations passed, so form is submitted
+        alert('Form submitted successfully!');
+        return true;
     }
 }
+
+
+
+
 
 // countdown timer
 const startingTime=5;
